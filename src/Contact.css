@@ -1,0 +1,85 @@
+.contact-wrapper{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 20px;
+    background-color: black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contact-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+.contact-title{
+    height: 60vh;
+    margin-top: 25vh;
+    font-size: 28px;
+    padding-inline:25px;
+    color: white;
+    animation-name: expand;
+    animation-duration: 0.5s;
+}
+
+
+.contact-section{
+    padding-inline:25px;
+    padding-bottom: 20vh;
+}
+
+.contact-section h1{
+    font-size: 30px;    
+    color: white;
+
+}
+.contact-section p a{
+    transition: all ease 0.3s;
+}
+.contact-section p a:hover{
+    transition: all ease 0.3s;
+    padding-left: 20px;
+}
+
+@media only screen and (min-width:600px) {
+    .contact-title{
+        font-size: 40px;
+        width: 300%;
+        text-align: center;
+        padding-bottom: 50vh;
+        animation-name: intro;
+        animation-duration: 0.5s;
+    }
+    .contact-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-section{
+        width: 50vw;
+    }
+
+}
+
+@keyframes intro {
+    from{
+        font-size: 100px;
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+@keyframes expand {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+        
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+        
+    }
+}
+

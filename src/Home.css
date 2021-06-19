@@ -1,0 +1,239 @@
+@media screen{
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.link-wrapper{
+    background-color: transparent;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: center;
+
+}
+
+
+
+.link {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    height: 84px;
+    overflow: hidden;
+    color: #EA0F1E; 
+    transition: all ease 0.3s;
+}
+
+.link:hover{
+    transition: all ease 0.3s;
+    margin-left: 30px;
+}
+
+
+
+.one{
+    animation-delay: 0s;
+    animation-name: slideup;
+
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.two{
+    animation-delay: 0.4s;
+    animation-name: slideup;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.three{
+    animation-delay: 0.8s;
+    animation-name: slideup;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.title {
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    height: 84px;
+    overflow: hidden;
+    background-color: transparent;
+    color: #EA0F1E;
+}
+
+.title:hover{
+    cursor: pointer;
+    transition: all ease 0.3s;
+    margin-left: 30px;
+}
+
+.hide{
+    display: none;
+}
+.title:hover .show{
+    display: none;
+}
+.title:hover .hide{
+    display: flex;
+}
+
+
+.x{
+    animation-delay: 0s;
+    animation-name: slideup2;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.y{
+    animation-delay: 0.4s;
+    animation-name: slideup2;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.z{
+    animation-delay: 0.8s;
+    animation-name: slideup2;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+.image-wrapper{
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+ 
+
+
+
+
+.image{
+    width: 170%;
+    margin-left: -15px;
+    animation-name: zoomIn;
+    animation-duration: 2s;
+    
+}
+
+
+.tap{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    z-index:1;
+    bottom: 0;
+    color: white;
+    padding-bottom: 30px;
+    animation: bounce 0.5s infinite alternate;
+    -webkit-animation: bounce 0.5s infinite alternate;
+}
+.link-container{
+    position: absolute;
+    z-index: 2;
+}
+
+.tap.active{
+    z-index: 1;
+}
+
+@media only screen and (min-width:600px){
+    .link-wrapper{
+        width: 100vw;
+        padding-inline: 15vw;
+    }
+    .title{
+        transition: all ease 0.3s;
+        font-size: 60px;
+        height: 150px;
+        width: 40vw;
+ 
+    }
+    .link{
+        font-size: 60px;
+        height: 150px;
+    }
+   .tap{
+       display: none;
+   }
+   .image-wrapper{
+       right: 0;
+       width: 30%;
+       padding-right: 30vw;
+   }
+ 
+   .image{
+   }
+}
+
+
+
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes slideup {
+      from{
+          opacity: 0;
+          transform: translateY(50%);
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0%);
+          visibility: visible;
+      }
+  }
+
+  @keyframes slideup2 {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+
+@keyframes zoomIn {
+    from{
+        width: 200%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

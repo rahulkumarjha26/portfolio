@@ -1,0 +1,145 @@
+.about-container{
+    height: 100vh;
+    overflow-y: scroll;
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+
+}
+.about-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.back{
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+.details{
+
+}
+
+.about-title{
+    font-size: 40px;
+    padding-block: 100px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.about-title h2{
+    overflow: hidden;
+
+}
+
+
+
+
+.animate{
+    animation-name: fadein;
+    animation-duration: 0.6s;
+}
+
+.show{
+    transition: all ease 0.3s;
+    display: flex;
+}
+.show:hover{
+    transition: all ease 0.3s;
+    padding-right: 20px;
+}
+.hide{
+    display: none;
+}
+.show:hover .hide{
+    display: block;
+}
+.image-container{
+
+}
+.image-container img{
+    width: 100%;
+
+}
+.about-section{
+    display: block;
+    padding-top: 10vh;
+    padding-bottom: 50vh;
+}
+.about-section h2{
+    font-size: 32px;
+    color:white;
+}
+
+.p-l{
+    color: white;
+    font-size: 25px;
+    line-height: 38px;
+}
+.p-m{
+    font-size: 20px;
+    line-height: 33px;
+    color: white;
+}
+.resume{
+    transition: all ease 0.3s;
+
+}
+
+.resume:hover{
+    transition: all ease 0.3s;
+    padding-left:20px;
+}
+
+
+@media only screen and (min-width:600px){
+    .about-title{
+        width: 100%;
+        padding-block: 210px;
+        display: flex;
+        justify-content: center;
+    }
+    .about-title h2{
+        font-size: 80px;
+        
+    }
+    .back{
+        padding:60px;
+    }
+    .image-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .image-container img{
+        height: 100vh;
+        object-fit: cover;
+    }
+    .about-section{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .detail-container{
+        display: block;
+        width: 50vw;
+        padding-inline: 5vw;
+    }
+}
+
+@keyframes fadein {
+    from{
+        transform: translateY(100%);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+

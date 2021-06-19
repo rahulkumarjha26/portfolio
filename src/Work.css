@@ -1,0 +1,62 @@
+
+
+
+.work-wrapper{
+    height: 100vh;
+    padding:45px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.work-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+.project-list{
+    padding-block: 25vh;
+    animation-name: showUp;
+    animation-duration: 0.5s;
+
+}
+
+.project-wrap{
+    transition: all ease 0.3s;
+    padding-bottom: 30px;
+
+}
+
+.project-wrap:hover{
+    transition: all ease 0.3s;
+    margin-left: 60px;
+
+}
+.project-wrap h1{
+    color: white;
+    font-size:50px;
+}
+.project-wrap p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -30px;
+    color: #EA0F1E;
+}
+
+@media only screen and (min-width:600px){
+    .work-wrapper{
+        padding-inline:15vw;
+    }
+    .project-wrap h1{
+        font-size: 80px;
+    }
+}
+@keyframes showUp {
+    from{
+        transform: translateY(50%) ;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
