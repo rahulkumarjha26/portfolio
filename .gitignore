@@ -1,0 +1,26 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Temporary browser profiles and testing dumps
+.chrome_tmp/
+.tmp_chrome/
+
+# Scratch screenshot dumps from local testing
+image copy*.png
+image.png
+dither_preview.png
+tight_dither_preview.png
+portfolio_preview*.png
+resume_preview.png
+mackenzie_avatar_extracted.png
+Photo on*.jpg
+
+# Local career prep and profile revision notes (keep private)
+interview_questions*.md
+naukri_profile_update.md
+linkedin_profile_update.md
+banner.html
+linkedin_banner*
+matrix_portrait.js
+parallax_portrait.js

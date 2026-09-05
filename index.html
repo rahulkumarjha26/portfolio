@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Kumar Jha — AI Engineer & Data Scientist</title>
+  <meta name="description" content="Personal portfolio of Rahul Kumar Jha — AI Engineer & Data Scientist specializing in Generative AI, Multi-Agent RAG, Computer Vision, and Anomaly Detection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Minimalist Fixed Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <h1 class="brand-title">Rahul Kumar Jha</h1>
+      </div>
+
+      <div class="header-nav">
+        <a href="Rahul_Kumar_Jha_Resume.pdf" download="Rahul_Kumar_Jha_Resume.pdf" class="nav-btn resume-btn">
+          Resume
+        </a>
+        <button type="button" class="nav-btn arrow-btn" id="prevBtn" aria-label="Previous column">
+          <svg viewBox="0 0 14 14" fill="none">
+            <path d="M8.5 3.5 5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" class="nav-btn arrow-btn" id="nextBtn" aria-label="Next column">
+          <svg viewBox="0 0 14 14" fill="none">
+            <path d="M5.5 3.5 9 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Horizontal Scrollable Main Deck -->
+  <main class="deck-main">
+    <div class="deck-container" id="deckContainer">
+
+      <!-- ==================== COLUMN 1: ABOUT ME ==================== -->
+      <section class="deck-column" data-column-id="about">
+        <div class="column-wrapper">
+          <!-- Sticky Frosted Header -->
+          <div class="column-header">
+            <div class="header-blur"></div>
+            <span class="column-label">About me</span>
+          </div>
+
+          <div class="column-body">
+            <!-- Profile Photo: Calm Retro Dither Avatar (Mackenzie-style) -->
+            <div class="avatar-card" id="avatarCard">
+              <canvas class="avatar-canvas"></canvas>
+            </div>
+
+            <!-- Intro Statement -->
+            <div class="intro-block">
+              <h2 class="intro-heading">
+                Hey, I'm Rahul. I build machine learning and generative AI systems that solve complex real-world data problems.
+              </h2>
+              <p class="intro-sub">
+                Based in Delhi, India. 5 years of production experience building distributed data pipelines, multi-agent RAG architectures, and predictive modeling engines.
+              </p>
+
+              <!-- Social / Contact Links -->
+              <div class="action-row">
+                <a href="https://www.linkedin.com/in/rahulkumarjha26" target="_blank" rel="noreferrer noopener" class="btn-action">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/rahulkumarjha26" target="_blank" rel="noreferrer noopener" class="btn-action">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+                <button type="button" class="btn-action" id="copyEmailBtn" data-email="rahulkumarjha26@gmail.com">
+                  <span id="copyBtnLabel">Copy email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dotted Specification Rows (Mackenzie Child Signature Pattern) -->
+            <div class="spec-list">
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Role</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">AI Engineer & Data Scientist. I own the pipeline from data engineering to production inference.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Focus</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Generative AI (Agentic RAG), Statistical Anomaly Detection, and Computer Vision for digital media.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Stack</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Python, PyTorch, Azure OpenAI, AWS, LangChain, Scikit-learn, OpenCV, Docker, FastAPI, SQL.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Experience</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">5 years building and deploying scalable machine learning and analytics workflows.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Previous Teams</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Senior Developer at WPP Production (Hogarth), Programmer Analyst at Cognizant, Turbo Hire.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Philosophy</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Raw intelligence is becoming a commodity. Grounded execution, reliable systems, and domain truth are where the future is won.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Location</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Delhi, India (Open to SF & global remote roles).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== COLUMN 2: TIMELINE ==================== -->
+      <section class="deck-column" data-column-id="timeline">
+        <div class="column-wrapper">
+          <div class="column-header">
+            <div class="header-blur"></div>
+            <span class="column-label">Timeline</span>
+          </div>
+
+          <div class="column-body">
+            <div class="timeline-group">
+              <!-- WPP Production -->
+              <article class="timeline-entry">
+                <div class="entry-header">
+                  <div class="entry-top">
+                    <h3 class="entry-company">WPP Production</h3>
+                    <span class="entry-date font-mono">2024 – 2026</span>
+                  </div>
+                  <div class="entry-role">Senior Developer – AI/ML & Digital Operations</div>
+                  <div class="entry-location">Gurugram, India</div>
+                </div>
+
+                <div class="entry-content">
+                  <p class="entry-summary">
+                    Led AI/ML initiatives within digital operations, automating media asset workflows and deploying production intelligence services for global clients.
+                  </p>
+                  <ul class="entry-bullets">
+                    <li>Developed an <strong>Agentic RAG system</strong> on Azure (AI Foundry, OpenAI, LangChain) for brand compliance and marketing intelligence, cutting search latency by 45%.</li>
+                    <li>Engineered computer vision and OCR pipelines using OpenCV to validate multilingual text layouts, color compliance, and format standards across video frames.</li>
+                    <li>Built low-latency FastAPI and Docker microservices for model serving, integrating with digital asset management (DAM) platforms handling 10,000+ daily media assets.</li>
+                    <li>Implemented MLflow experiment tracking, standardizing evaluation pipelines and optimizing container inference throughput by 30%.</li>
+                  </ul>
+                  <div class="tag-row">
+                    <span>Azure OpenAI</span>
+                    <span>LangChain</span>
+                    <span>RAG</span>
+                    <span>OpenCV</span>
+                    <span>FastAPI</span>
+                    <span>Docker</span>
+                    <span>MLflow</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Cognizant -->
+              <article class="timeline-entry">
+                <div class="entry-header">
+                  <div class="entry-top">
+                    <h3 class="entry-company">Cognizant</h3>
+                    <span class="entry-date font-mono">2022 – 2024</span>
+                  </div>
+                  <div class="entry-role">Programmer Analyst – Data Science & Analytics</div>
+                  <div class="entry-location">Bengaluru, India</div>
+                </div>
+
+                <div class="entry-content">
+                  <p class="entry-summary">
+                    Formulated and deployed Python-based data analytics solutions and statistical models for Fortune 500 banking clients.
+                  </p>
+                  <ul class="entry-bullets">
+                    <li>Conducted extensive <strong>Exploratory Data Analysis (EDA)</strong> and statistical anomaly detection on high-dimensional financial transaction logs to identify fraud indicators.</li>
+                    <li>Engineered automated data extraction and aggregation pipelines utilizing AWS (S3, CloudWatch, ECS) and MySQL, reducing monthly report generation latency by 55%.</li>
+                    <li>Constructed analytical dashboard engines and automated KPI summaries, replacing legacy manual auditing processes.</li>
+                    <li>Designed modular data validation scripts that accelerated quarterly project delivery timelines by 25% across distributed analytics teams.</li>
+                  </ul>
+                  <div class="tag-row">
+                    <span>Python</span>
+                    <span>Data Science</span>
+                    <span>AWS (S3, ECS)</span>
+                    <span>MySQL</span>
+                    <span>Scikit-learn</span>
+                    <span>EDA</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Turbo Hire -->
+              <article class="timeline-entry">
+                <div class="entry-header">
+                  <div class="entry-top">
+                    <h3 class="entry-company">Turbo Hire</h3>
+                    <span class="entry-date font-mono">2021 – 2022</span>
+                  </div>
+                  <div class="entry-role">Software Engineer – Data & Platform</div>
+                  <div class="entry-location">Hyderabad, India</div>
+                </div>
+
+                <div class="entry-content">
+                  <p class="entry-summary">
+                    Built backend data processing workflows and integrated machine learning endpoints for an AI-powered talent intelligence platform.
+                  </p>
+                  <ul class="entry-bullets">
+                    <li>Engineered data ingestion pipelines handling thousands of unstructured candidate profiles and resumes daily.</li>
+                    <li>Integrated RESTful APIs and ML model inference endpoints for automated candidate screening and entity extraction.</li>
+                    <li>Optimized complex SQL queries and relational schemas in PostgreSQL, achieving a 35% reduction in search query latency.</li>
+                  </ul>
+                  <div class="tag-row">
+                    <span>Python</span>
+                    <span>PostgreSQL</span>
+                    <span>REST APIs</span>
+                    <span>SQL Tuning</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== COLUMN 3: PROJECTS ==================== -->
+      <section class="deck-column" data-column-id="projects">
+        <div class="column-wrapper">
+          <div class="column-header">
+            <div class="header-blur"></div>
+            <span class="column-label">Selected Work</span>
+          </div>
+
+          <div class="column-body">
+            <div class="projects-group">
+              <!-- Project 1: Threadmark (Open Source / Primary Showcase) -->
+              <article class="project-entry">
+                <div class="project-thumbnail">
+                  <img src="project_threadmark_glass.png" alt="Threadmark — AI Insurance Command Center" class="project-image">
+                </div>
+                <div class="project-details">
+                  <div class="project-title-row">
+                    <h3 class="project-name">Threadmark — AI Insurance Command Center</h3>
+                    <span class="project-tag font-mono">2025</span>
+                  </div>
+                  <p class="project-text">
+                    An insurance company in a box run by 6 specialized AI agents (Maya, Sage, Karim, Vera, Ren, Atlas). Engineered so LLMs safely operate in money-moving regulated domains: pricing and eligibility are deterministic code tools, citations are verified in code before a customer sees them, and every retrieval layer is backed by an 86-case golden evaluation benchmark.
+                  </p>
+                  <div class="metric-row font-mono">
+                    <span>86-case golden eval</span>
+                    <span>94.2% refusal accuracy</span>
+                    <span>1.0 must_not_mention</span>
+                    <span>5-layer retrieval ablation</span>
+                  </div>
+                  <div class="project-actions">
+                    <a href="https://github.com/rahulkumarjha26/threadmark" target="_blank" rel="noreferrer noopener" class="btn-action project-link-btn">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      <span>github.com/rahulkumarjha26/threadmark</span>
+                    </a>
+                  </div>
+                  <div class="tag-row">
+                    <span>Python 3.12</span>
+                    <span>FastAPI</span>
+                    <span>Postgres + pgvector</span>
+                    <span>Next.js 15</span>
+                    <span>Hybrid RAG (RRF)</span>
+                    <span>Cross-Encoder</span>
+                    <span>Evals & Guardrails</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 2: RetailGuard AI (Open Source / Featured) -->
+              <article class="project-entry">
+                <div class="project-thumbnail">
+                  <img src="project_retail_guard.jpg" alt="RetailGuard AI — Real-Time Loss Prevention & Theft Vision Engine" class="project-image">
+                </div>
+                <div class="project-details">
+                  <div class="project-title-row">
+                    <h3 class="project-name">RetailGuard AI — Theft Surveillance & Loss Prevention</h3>
+                    <span class="project-tag font-mono">2025</span>
+                  </div>
+                  <p class="project-text">
+                    Edge-optimized computer vision surveillance system combining YOLOv11 human pose estimation, dynamic concealment zone geometry, and Video Vision Transformers (ViViT). Computes anatomical pocket/waistband zones from skeletal keypoints, tracks items through motion blur via a custom spatial coasting tracker, and verifies item occlusion against hand-empty retreat at 30+ FPS.
+                  </p>
+                  <div class="metric-row font-mono">
+                    <span>30+ FPS (MPS / CUDA)</span>
+                    <span>YOLOv11 Pose</span>
+                    <span>ViViT Action Recognition</span>
+                    <span>Spatial Geometry</span>
+                  </div>
+                  <div class="project-actions">
+                    <a href="https://github.com/rahulkumarjha26/retail-guard-ai" target="_blank" rel="noreferrer noopener" class="btn-action project-link-btn">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      <span>github.com/rahulkumarjha26/retail-guard-ai</span>
+                    </a>
+                  </div>
+                  <div class="tag-row">
+                    <span>Python 3.10+</span>
+                    <span>PyTorch</span>
+                    <span>YOLOv11</span>
+                    <span>Transformers</span>
+                    <span>OpenCV</span>
+                    <span>FastAPI</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== COLUMN 4: SKILLS & SYSTEMS ==================== -->
+      <section class="deck-column" data-column-id="skills">
+        <div class="column-wrapper">
+          <div class="column-header">
+            <div class="header-blur"></div>
+            <span class="column-label">Skills & Systems</span>
+          </div>
+
+          <div class="column-body">
+            <!-- Systems Breakdown -->
+            <div class="spec-list">
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Generative AI</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Multi-Agent Systems, RAG Pipelines, LangChain, LangGraph, Azure OpenAI, Vector Databases (Pinecone, Chroma), Semantic Caching, Prompt Engineering, MLflow.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Data Science & ML</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Statistical Modeling, Predictive Analytics, Exploratory Data Analysis (EDA), Scikit-learn, XGBoost, Random Forest, Isolation Forest, Anomaly Detection, SMOTE, Pandas, NumPy.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Computer Vision</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">OpenCV, PyTorch, TensorFlow, Keras, OCR (TrOCR, Tesseract), Video Frame Extraction, Layout Analysis, Transfer Learning, CNNs.</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Cloud & MLOps</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">Azure (AI Foundry, Functions, Blob, AKS), AWS (S3, CloudWatch, ECS, Lambda), Docker, FastAPI, Redis, PostgreSQL, MySQL, Git, CI/CD.</div>
+              </div>
+            </div>
+
+            <!-- Certifications Block -->
+            <div class="section-block">
+              <div class="block-label font-mono">Verified Certifications</div>
+              <div class="cert-rows">
+                <div class="cert-item">
+                  <div class="cert-main">Machine Learning Specialization</div>
+                  <div class="cert-issuer font-mono">Stanford Online / Coursera</div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-main">Generative AI with Large Language Models</div>
+                  <div class="cert-issuer font-mono">DeepLearning.AI</div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-main">AWS Certified Cloud Practitioner</div>
+                  <div class="cert-issuer font-mono">Amazon Web Services</div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-main">AI: Constraint Satisfaction</div>
+                  <div class="cert-issuer font-mono">IIT Madras</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Block -->
+            <div class="section-block">
+              <div class="block-label font-mono">Education</div>
+              <div class="cert-item">
+                <div class="cert-main">Bachelor of Technology (Computer Science & Engineering)</div>
+                <div class="cert-issuer font-mono">Chandigarh University, India • 2017 – 2021</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== COLUMN 5: CONTACT ==================== -->
+      <section class="deck-column" data-column-id="contact">
+        <div class="column-wrapper">
+          <div class="column-header">
+            <div class="header-blur"></div>
+            <span class="column-label">Contact</span>
+          </div>
+
+          <div class="column-body">
+            <div class="intro-block">
+              <h2 class="intro-heading">
+                Interested in working together or exploring opportunities? Let's connect.
+              </h2>
+              <p class="intro-sub">
+                Always open to connecting with engineering leaders, researchers, and ambitious product teams building intelligent AI systems. Open to roles in San Francisco, US remote, and global engineering hubs.
+              </p>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="spec-list">
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Email</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">
+                  <a href="mailto:rahulkumarjha26@gmail.com" class="link-clean">rahulkumarjha26@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">Phone</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text font-mono">+91-8383933767</div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">LinkedIn</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">
+                  <a href="https://www.linkedin.com/in/rahulkumarjha26" target="_blank" rel="noreferrer noopener" class="link-clean">linkedin.com/in/rahulkumarjha26</a>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-title-row">
+                  <span class="spec-tag">GitHub</span>
+                  <span class="spec-dots"></span>
+                </div>
+                <div class="spec-text">
+                  <a href="https://github.com/rahulkumarjha26" target="_blank" rel="noreferrer noopener" class="link-clean">github.com/rahulkumarjha26</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Download Card -->
+            <div class="download-box">
+              <div class="download-info">
+                <span class="download-title">Verified Resume (PDF)</span>
+                <span class="download-meta font-mono">1-Page • Updated Sept 2026</span>
+              </div>
+              <a href="Rahul_Kumar_Jha_Resume.pdf" download="Rahul_Kumar_Jha_Resume.pdf" class="btn-action">
+                Download PDF
+              </a>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="footer-note">
+              <span class="font-mono text-xs text-zinc-600">© 2026 Rahul Kumar Jha</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="portrait_data.js"></script>
+  <script src="pixel_portrait.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
