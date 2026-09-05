@@ -46,10 +46,10 @@
 
     // Mouse tracking with smooth spring damping
     const mouse = {
-      x: -1000,
-      y: -1000,
-      targetX: -1000,
-      targetY: -1000,
+      x: 0,
+      y: 0,
+      targetX: 0,
+      targetY: 0,
       isHovered: false,
       // Smoothed tilt angles for 3D parallax
       rotX: 0,
@@ -222,8 +222,15 @@
     window.addEventListener('resize', resizeCanvas);
 
     // Interactive mouse listeners with 3D Parallax tracking
-    card.addEventListener('mouseenter', () => {
+    card.addEventListener('mouseenter', (e) => {
       mouse.isHovered = true;
+      const rect = card.getBoundingClientRect();
+      const clientX = e.clientX - rect.left;
+      const clientY = e.clientY - rect.top;
+      mouse.targetX = clientX;
+      mouse.targetY = clientY;
+      mouse.x = clientX;
+      mouse.y = clientY;
     });
 
     card.addEventListener('mousemove', (e) => {
@@ -270,23 +277,19 @@
       mouse.targetRotY = 0;
     });
 
-    // Slow, calm animation loop
-    let time = 0;
+    // Slow, smooth interactive animation loop
     let animId = null;
 
     function render() {
-      // Significantly slower, calm cadence (6x slower than before)
-      time += 0.007;
-
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const displayW = canvas.width / dpr;
       const displayH = canvas.height / dpr;
 
-      // 1. Smoothly interpolate 3D card tilt (Parallax Layer 1)
-      mouse.rotX += (mouse.targetRotX - mouse.rotX) * 0.10;
-      mouse.rotY += (mouse.targetRotY - mouse.rotY) * 0.10;
+      // 1. Smoothly interpolate 3D card tilt
+      mouse.rotX += (mouse.targetRotX - mouse.rotX) * 0.12;
+      mouse.rotY += (mouse.targetRotY - mouse.rotY) * 0.12;
 
-      if (Math.abs(mouse.rotX) > 0.01 || Math.abs(mouse.rotY) > 0.01 || mouse.isHovered) {
+      if (mouse.isHovered && (Math.abs(mouse.rotX) > 0.01 || Math.abs(mouse.rotY) > 0.01)) {
         card.style.transform = `perspective(900px) rotateX(${mouse.rotX.toFixed(2)}deg) rotateY(${mouse.rotY.toFixed(2)}deg) scale3d(1.012, 1.012, 1.012)`;
         card.style.boxShadow = `0 ${14 + Math.abs(mouse.rotX) * 2}px ${36 + Math.abs(mouse.rotY) * 2}px -6px rgba(0, 0, 0, 0.75), inset 0 0 0 1px rgba(255, 255, 255, 0.06)`;
       } else {
@@ -294,20 +297,11 @@
         card.style.boxShadow = '0 12px 32px -8px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.04)';
       }
 
-      // Smooth mouse cursor coordinate interpolation
+      // Smooth mouse cursor coordinate interpolation when hovered
       if (mouse.isHovered) {
-        mouse.x += (mouse.targetX - mouse.x) * 0.10;
-        mouse.y += (mouse.targetY - mouse.y) * 0.10;
-      } else {
-        const ambientX = (Math.sin(time * 0.4) * 0.2 + 0.5) * displayW;
-        const ambientY = (Math.cos(time * 0.3) * 0.15 + 0.45) * displayH;
-        mouse.x += (ambientX - mouse.x) * 0.03;
-        mouse.y += (ambientY - mouse.y) * 0.03;
+        mouse.x += (mouse.targetX - mouse.x) * 0.15;
+        mouse.y += (mouse.targetY - mouse.y) * 0.15;
       }
-
-      // In-canvas parallax offset (Foreground shifts slightly opposite to background)
-      const parallaxOffsetX = (mouse.x - displayW * 0.5) * 0.022;
-      const parallaxOffsetY = (mouse.y - displayH * 0.5) * 0.020;
 
       ctx.save();
       ctx.scale(dpr, dpr);
@@ -320,53 +314,47 @@
         const cellW = displayW / gridCols;
         const cellH = displayH / gridRows;
         const pixelW = cellW * 0.96;
-        const pixelH = Math.max(1, cellH * 0.90); // gentle micro-scanline spacing
+        const pixelH = Math.max(1, cellH * 0.90); // crisp micro-scanline spacing
 
-        const lightRadius = mouse.isHovered ? 130 : 160;
+        const lightRadius = 140;
         const lightRadiusSq = lightRadius * lightRadius;
 
         for (let r = 0; r < gridRows; r++) {
           const cy = r * cellH + cellH * 0.5;
           const bayerRow = r % 4;
-          // Very gentle, calm row wave
-          const rowWave = Math.sin(time * 1.6 + r * 0.18) * 3.5;
 
           for (let c = 0; c < gridCols; c++) {
             const cx = c * cellW + cellW * 0.5;
             const idx = r * gridCols + c;
-            const fgW = focusWeight[idx];
 
-            let pr = pixelR[idx];
-            let pg = pixelG[idx];
-            let pb = pixelB[idx];
+            const pr = pixelR[idx];
+            const pg = pixelG[idx];
+            const pb = pixelB[idx];
 
-            // In-canvas 2D Parallax: Foreground moves slightly relative to background
-            const pxOffset = parallaxOffsetX * (fgW - 0.4);
-            const pyOffset = parallaxOffsetY * (fgW - 0.4);
-
-            // Cursor light radius
-            const dx = cx - mouse.x;
-            const dy = cy - mouse.y;
-            const distSq = dx * dx + dy * dy;
-
+            // Interactive cursor spotlight only when hovered
             let lightBoost = 0;
-            if (distSq < lightRadiusSq) {
-              const d = Math.sqrt(distSq);
-              const falloff = Math.pow(1.0 - d / lightRadius, 2);
-              lightBoost = falloff * (mouse.isHovered ? 24 : 10);
+            if (mouse.isHovered) {
+              const dx = cx - mouse.x;
+              const dy = cy - mouse.y;
+              const distSq = dx * dx + dy * dy;
+              if (distSq < lightRadiusSq) {
+                const d = Math.sqrt(distSq);
+                const falloff = Math.pow(1.0 - d / lightRadius, 2);
+                lightBoost = falloff * 26;
+              }
             }
 
-            // Calm, slow micro-shimmer (gentle breathing sensation)
-            const bayerVal = (BAYER_4X4[bayerRow][c % 4] - 0.5) * 4;
-            const shimmer = (Math.sin(time * 2.2 + c * 0.25 + r * 0.3) * 3) + rowWave * 0.3;
-            const mod = lightBoost + shimmer + bayerVal;
+            // Crisp Bayer matrix micro-texture for authentic digital canvas feel
+            const bayerVal = (BAYER_4X4[bayerRow][c % 4] - 0.5) * 3;
+            const mod = lightBoost + bayerVal;
 
             const finalR = Math.min(255, Math.max(0, Math.round(pr + mod)));
             const finalG = Math.min(255, Math.max(0, Math.round(pg + mod)));
             const finalB = Math.min(255, Math.max(0, Math.round(pb + mod * 0.85)));
 
             ctx.fillStyle = `rgb(${finalR},${finalG},${finalB})`;
-            ctx.fillRect(c * cellW + pxOffset, r * cellH + pyOffset, pixelW, pixelH);
+            // Render directly in grid cell with zero geometric displacement/warping
+            ctx.fillRect(c * cellW, r * cellH, pixelW, pixelH);
           }
         }
 
