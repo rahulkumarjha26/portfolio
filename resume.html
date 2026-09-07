@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Kumar Jha - Resume</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 6mm 10mm 6mm 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #ffffff;
+      color: #1a202c;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 8.2pt;
+      line-height: 1.24;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 4px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #1f2937;
+    }
+
+    h1 {
+      font-size: 17.5pt;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #111827;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .subtitle {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #374151;
+      letter-spacing: 0.4px;
+      margin-bottom: 2.5px;
+    }
+
+    .contact-bar {
+      font-size: 8pt;
+      color: #4b5563;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-bar a {
+      color: #1f2937;
+      text-decoration: none;
+    }
+
+    .contact-bar span {
+      color: #9ca3af;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 3.5px;
+    }
+
+    .section-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #111827;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 1px;
+      margin-bottom: 2.5px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 8.1pt;
+      color: #374151;
+      text-align: justify;
+      line-height: 1.25;
+    }
+
+    /* Skills Grid */
+    .skills-block {
+      font-size: 8pt;
+      line-height: 1.25;
+    }
+
+    .skills-row {
+      margin-bottom: 1px;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .skill-list {
+      color: #374151;
+    }
+
+    /* Experience & Projects */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 2px;
+      margin-bottom: 0.5px;
+    }
+
+    .role-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .company-name {
+      font-weight: 600;
+      color: #1d4ed8;
+    }
+
+    .date-location {
+      font-size: 7.8pt;
+      color: #4b5563;
+      font-weight: 500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      margin-left: 13px;
+      margin-top: 0.5px;
+      margin-bottom: 1.5px;
+    }
+
+    ul.bullet-list li {
+      font-size: 8pt;
+      color: #374151;
+      line-height: 1.22;
+      margin-bottom: 1px;
+      text-align: justify;
+    }
+
+    ul.bullet-list li strong {
+      color: #111827;
+      font-weight: 600;
+    }
+
+    /* Education & Certs Inline */
+    .split-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 1px;
+    }
+
+    .split-col {
+      flex: 1;
+    }
+
+    .edu-title {
+      font-size: 8.4pt;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .edu-meta {
+      font-size: 7.8pt;
+      color: #4b5563;
+    }
+
+    .cert-item {
+      font-size: 8pt;
+      color: #374151;
+      margin-bottom: 1px;
+      line-height: 1.2;
+    }
+
+    .cert-name {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .cert-issuer {
+      color: #64748b;
+    }
+
+    @media print {
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+      }
+      .resume-container {
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <!-- Header -->
+    <header>
+      <h1>Rahul Kumar Jha</h1>
+      <div class="subtitle">AI & Data Science Engineer | Machine Learning & Generative AI</div>
+      <div class="contact-bar">
+        <span>Delhi, India</span>
+        <span>•</span>
+        <span>+91-8383933767</span>
+        <span>•</span>
+        <a href="mailto:rahulkumarjha26@gmail.com">rahulkumarjha26@gmail.com</a>
+        <span>•</span>
+        <a href="https://rahuljha.co.in">rahuljha.co.in</a>
+        <span>•</span>
+        <a href="https://github.com/rahulkumarjha26">github.com/rahulkumarjha26</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/rahulkumarjha26">linkedin.com/in/rahulkumarjha26</a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        <strong>Data Scientist & AI Engineer with 5 years of experience</strong> delivering enterprise-grade Machine Learning, Generative AI, and analytical data solutions. Proven track record in developing statistical models, end-to-end RAG workflows, automated computer vision pipelines, and predictive analytics. Skilled in building resilient data ingestion pipelines, optimizing inference workloads, and deploying scalable microservices across Azure and AWS for global enterprise clients.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-block">
+        <div class="skills-row">
+          <span class="skill-category">Languages & Databases:</span>
+          <span class="skill-list">Python, SQL, DuckDB, MySQL, PostgreSQL, Redis</span>
+        </div>
+        <div class="skills-row">
+          <span class="skill-category">Data Science & ML:</span>
+          <span class="skill-list">Statistical Modeling, Predictive Analytics, EDA, Scikit-learn, Pandas, NumPy, Feature Engineering, XGBoost, Anomaly Detection</span>
+        </div>
+        <div class="skills-row">
+          <span class="skill-category">Deep Learning & CV:</span>
+          <span class="skill-list">PyTorch, TensorFlow, Keras, OpenCV, OCR (TrOCR/Tesseract), Image & Video Processing, Transfer Learning, CNNs</span>
+        </div>
+        <div class="skills-row">
+          <span class="skill-category">Generative AI & LLMs:</span>
+          <span class="skill-list">Agentic AI, LangGraph, LangChain, RAG Pipelines, Local LLM Inference (Ollama), Vector DBs (Pinecone, Chroma), Prompt Engineering, MLflow</span>
+        </div>
+        <div class="skills-row">
+          <span class="skill-category">Cloud & Deployment:</span>
+          <span class="skill-list">Azure (AI Foundry, Functions, Blob, AKS), AWS (S3, CloudWatch, ECS, Lambda), Docker, FastAPI, REST APIs, Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <div class="section-title">Professional Experience</div>
+
+      <!-- WPP -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">Senior Developer – AI/ML & Digital Operations</span> | 
+          <span class="company-name">WPP Production (formerly Hogarth Studios)</span>
+        </div>
+        <div class="date-location">Aug 2024 – Jul 2026 | Gurugram, India</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Architected and deployed production AI/ML services supporting digital media operations, automating digital asset tagging, metadata extraction, and quality control across enterprise marketing workflows.</li>
+        <li>Developed an <strong>Agentic RAG solution</strong> leveraging Azure AI Foundry, OpenAI, LangChain, and vector databases for brand compliance and marketing asset intelligence, reducing knowledge lookup time by <strong>45%</strong>.</li>
+        <li>Built computer vision and OCR pipelines using OpenCV and deep learning to validate multi-lingual text layouts, color compliance, and format standards across high-volume video and image assets.</li>
+        <li>Engineered low-latency <strong>FastAPI and Docker</strong> microservices for model serving, integrating seamlessly with digital asset management (DAM) platforms and processing over 10,000 daily media assets.</li>
+        <li>Implemented <strong>MLflow</strong> experiment tracking and automated model evaluation pipelines, optimizing CPU/memory inference profiles and cutting container execution overhead by <strong>30%</strong>.</li>
+      </ul>
+
+      <!-- Cognizant -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">Programmer Analyst – Data Science & Analytics</span> | 
+          <span class="company-name">Cognizant</span>
+        </div>
+        <div class="date-location">Jan 2022 – May 2024 | Bengaluru, India</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Formulated and deployed Python-based data analytics solutions for global banking clients, processing transaction logs and identifying suspicious account behavior patterns.</li>
+        <li>Conducted extensive <strong>Exploratory Data Analysis (EDA)</strong> and statistical anomaly detection on high-dimensional financial records using Pandas, NumPy, and Scikit-learn to uncover transaction fraud indicators.</li>
+        <li>Engineered automated data extraction and aggregation pipelines utilizing AWS (S3, CloudWatch, ECS) and MySQL, reducing monthly transaction report generation latency by <strong>55%</strong>.</li>
+        <li>Constructed analytical dashboard engines and automated KPI summaries, replacing legacy manual auditing processes and enhancing data accuracy for risk compliance teams.</li>
+        <li>Collaborated with cross-functional analytics groups as a Programmer Analyst to design modular data validation modules, accelerating project rollout timelines by <strong>25%</strong>.</li>
+      </ul>
+
+      <!-- Turbo Hire -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">Software Engineer – Data & Platform</span> | 
+          <span class="company-name">Turbo Hire</span>
+        </div>
+        <div class="date-location">Jul 2021 – Jan 2022 | Hyderabad, India</div>
+      </div>
+      <ul class="bullet-list">
+        <li>Developed data ingestion and processing workflows for an AI-powered talent intelligence platform, handling thousands of unstructured candidate profiles daily.</li>
+        <li>Integrated RESTful APIs and machine learning inference endpoints for automated candidate screening, entity extraction, and skill relevance scoring.</li>
+        <li>Optimized complex SQL queries and relational database schemas in PostgreSQL, achieving a <strong>35% improvement</strong> in candidate search query latency.</li>
+        <li>Implemented data validation, deduplication, and cleaning scripts to ensure high data integrity across relational talent pools.</li>
+      </ul>
+    </section>
+
+    <!-- Key Projects -->
+    <section>
+      <div class="section-title">Key Projects</div>
+
+      <!-- Project 1: Numera -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">Numera — Air-Gapped Tabular Intelligence Engine</span> | 
+          <a href="https://github.com/rahulkumarjha26/numera" style="color: #1d4ed8; text-decoration: underline; font-size: 8pt;">github.com/rahulkumarjha26/numera</a>
+        </div>
+        <div class="date-location">Open Source / Featured</div>
+      </div>
+      <div style="font-size: 7.8pt; color: #4b5563; margin-bottom: 1px;">Python 3.12, DuckDB OLAP, LangGraph, Ollama (Local LLM), Next.js 16, Polars, FastAPI</div>
+      <ul class="bullet-list">
+        <li>Architected an air-gapped enterprise tabular intelligence engine allowing confidential analysis of 50,000+ row spreadsheets with zero cloud data transmission and zero context overflow.</li>
+        <li>Implemented schema virtualization and deterministic in-memory DuckDB OLAP execution, reducing token overhead by <strong>99.8%</strong> and completing complex analytical aggregations in <strong>under 20ms</strong>.</li>
+      </ul>
+
+      <!-- Project 2: Threadmark -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">Threadmark — AI Insurance Command Center</span> | 
+          <a href="https://github.com/rahulkumarjha26/threadmark" style="color: #1d4ed8; text-decoration: underline; font-size: 8pt;">github.com/rahulkumarjha26/threadmark</a>
+        </div>
+        <div class="date-location">Open Source / Featured</div>
+      </div>
+      <div style="font-size: 7.8pt; color: #4b5563; margin-bottom: 1px;">Python 3.12, FastAPI, Postgres + pgvector, Next.js 15, Hybrid RAG (RRF), Cross-Encoder, Evals</div>
+      <ul class="bullet-list">
+        <li>Architected a multi-agent system (6 specialist agents) where financial computations and eligibility are deterministic code tools and citations are verified in code before display.</li>
+        <li>Implemented a 5-layer retrieval pipeline (dense vectors, BM25 hybrid with Reciprocal Rank Fusion, cross-encoder rerank) achieving <strong>94.2% refusal accuracy</strong> across an 86-case golden evaluation benchmark.</li>
+      </ul>
+
+      <!-- Project 3: RetailGuard AI -->
+      <div class="item-header">
+        <div>
+          <span class="role-title">RetailGuard AI — Loss Prevention & Theft Vision Engine</span> | 
+          <a href="https://github.com/rahulkumarjha26/retail-guard-ai" style="color: #1d4ed8; text-decoration: underline; font-size: 8pt;">github.com/rahulkumarjha26/retail-guard-ai</a>
+        </div>
+        <div class="date-location">Computer Vision / Open Source</div>
+      </div>
+      <div style="font-size: 7.8pt; color: #4b5563; margin-bottom: 1px;">Python, PyTorch, YOLOv11-Pose, ViViT Transformers, OpenCV, FastAPI, Edge MPS/CUDA</div>
+      <ul class="bullet-list">
+        <li>Engineered a retail theft surveillance system combining YOLOv11 human pose estimation, anatomical concealment geometry, and spatiotemporal Video Vision Transformers (ViViT).</li>
+        <li>Developed dynamic pocket projection anchored to 17 skeletal keypoints and an occlusion-verification state machine; sustained <strong>30.0+ FPS</strong> real-time inference on Apple Silicon MPS/CUDA.</li>
+      </ul>
+    </section>
+
+    <!-- Education & Certifications (Side by Side) -->
+    <section>
+      <div class="split-row">
+        <!-- Education -->
+        <div class="split-col" style="flex: 1.1;">
+          <div class="section-title">Education</div>
+          <div style="margin-top: 3px;">
+            <div class="edu-title">Bachelor of Technology in Computer Science & Engineering</div>
+            <div class="company-name" style="font-size: 8.5pt;">Chandigarh University, India</div>
+            <div class="edu-meta">2017 – 2021</div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="split-col" style="flex: 1.4;">
+          <div class="section-title">Certifications</div>
+          <div style="margin-top: 3px;">
+            <div class="cert-item"><span class="cert-name">Machine Learning Specialization</span> — <span class="cert-issuer">Stanford Online / Coursera</span></div>
+            <div class="cert-item"><span class="cert-name">Generative AI with Large Language Models</span> — <span class="cert-issuer">DeepLearning.AI</span></div>
+            <div class="cert-item"><span class="cert-name">AWS Certified Cloud Practitioner</span> — <span class="cert-issuer">Amazon Web Services</span></div>
+            <div class="cert-item"><span class="cert-name">AI: Constraint Satisfaction</span> — <span class="cert-issuer">IIT Madras</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
