@@ -67,7 +67,7 @@ Delhi, India | +91-8383933767 | rahulkumarjha26@gmail.com | [rahuljha.co.in](htt
 ## EDUCATION & CERTIFICATIONS
 
 ### Education
-* **Bachelor of Technology in Computer Science & Engineering** | Chandigarh University (2017 – 2021)
+* **Bachelor of Technology in Computer Science & Engineering** | Chandigarh Engineering College, Landran (2017 – 2021)
 
 ### Certifications
 * **Machine Learning Specialization** — Stanford Online / Coursera
