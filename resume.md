@@ -28,13 +28,17 @@ Delhi, India | +91-8383933767 | rahulkumarjha26@gmail.com | [rahuljha.co.in](htt
 * Engineered low-latency **FastAPI and Docker** microservices for model serving, integrating seamlessly with digital asset management (DAM) platforms and processing over 10,000 daily media assets.
 * Implemented **MLflow** experiment tracking and automated model evaluation pipelines, optimizing CPU/memory inference profiles and cutting container execution overhead by **30%**.
 
-### Programmer Analyst – Data Science & Analytics | Cognizant
-*Jan 2022 – May 2024 | Bengaluru, India*
-* Formulated and deployed Python-based data analytics solutions for global banking clients, processing transaction logs and identifying suspicious account behavior patterns.
+### Associate Data Scientist – Machine Learning | Cognizant
+*Feb 2023 – May 2024 | Bengaluru, India*
+* Formulated and deployed Python-based ML models and predictive analytics solutions for global banking clients, identifying suspicious transaction behavior patterns.
 * Conducted extensive **Exploratory Data Analysis (EDA)** and statistical anomaly detection on high-dimensional financial records using Pandas, NumPy, and Scikit-learn to uncover transaction fraud indicators.
+* Collaborated with risk and compliance teams to operationalize automated fraud-scoring logic, improving anomaly detection precision across account activity logs.
+
+### Data Analyst – Business Intelligence & Automation | Cognizant
+*Jan 2022 – Jan 2023 | Bengaluru, India*
 * Engineered automated data extraction and aggregation pipelines utilizing AWS (S3, CloudWatch, ECS) and MySQL, reducing monthly transaction report generation latency by **55%**.
 * Constructed analytical dashboard engines and automated KPI summaries, replacing legacy manual auditing processes and enhancing data accuracy for risk compliance teams.
-* Collaborated with cross-functional analytics groups as a Programmer Analyst to design modular data validation modules, accelerating project rollout timelines by **25%**.
+* Designed modular data validation modules and automated auditing scripts, accelerating client reporting rollout timelines by **25%**.
 
 ### Software Engineer – Data & Platform | Turbo Hire
 *Jul 2021 – Jan 2022 | Hyderabad, India*
