@@ -1,6 +1,6 @@
 # Rahul Kumar Jha — Personal Portfolio
 
-> Interactive personal portfolio for **Rahul Kumar Jha** (AI Engineer & Data Scientist). Built with a horizontal card-deck architecture inspired by modern design engineering, featuring a live dithered scanline avatar, interactive project showcases, and a responsive experience.
+> Interactive personal portfolio for **Rahul Kumar Jha** (AI & Generative AI Engineer). Built with a horizontal card-deck architecture inspired by modern design engineering, featuring a live dithered scanline avatar, interactive project showcases, and a responsive experience.
 
 ## Live Domain
 - **URL**: [https://rahuljha.co.in](https://rahuljha.co.in)

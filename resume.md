@@ -1,44 +1,43 @@
 # RAHUL KUMAR JHA
-**AI & Data Science Engineer | Machine Learning & Generative AI**  
+**AI & Generative AI Engineer | Agentic Systems & LLM Applications**  
 Delhi, India | +91-8383933767 | rahulkumarjha26@gmail.com | [rahuljha.co.in](https://rahuljha.co.in) | [github.com/rahulkumarjha26](https://github.com/rahulkumarjha26) | [linkedin.com/in/rahulkumarjha26](https://www.linkedin.com/in/rahulkumarjha26)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-**Data Scientist & AI Engineer with 5 years of experience** delivering enterprise-grade Machine Learning, Generative AI, and analytical data solutions. Proven track record in developing statistical models, end-to-end RAG workflows, automated computer vision pipelines, and predictive analytics. Skilled in building resilient data ingestion pipelines, optimizing inference workloads, and deploying scalable microservices across Azure and AWS for global enterprise clients.
+**AI & Generative AI Engineer with 5 years of experience** architecting enterprise-grade LLM applications, Agentic RAG workflows, automated computer vision pipelines, and resilient backend microservices. Proven track record in building multi-agent systems, optimizing inference workloads, and deploying scalable services across Azure and AWS for global enterprise clients. Skilled in prompt optimization, context management, semantic retrieval, and low-latency API serving.
 
 ---
 
 ## TECHNICAL SKILLS
-* **Languages & Databases:** Python, SQL, DuckDB, MySQL, PostgreSQL, Redis
-* **Data Science & ML:** Statistical Modeling, Predictive Analytics, EDA, Scikit-learn, Pandas, NumPy, Feature Engineering, XGBoost, Anomaly Detection
-* **Deep Learning & CV:** PyTorch, TensorFlow, Keras, OpenCV, OCR (TrOCR/Tesseract), Image & Video Processing, Transfer Learning, CNNs
-* **Generative AI & LLMs:** Agentic AI, LangGraph, LangChain, RAG Pipelines, Local LLM Inference (Ollama), Vector Databases (Pinecone, Chroma), Prompt Engineering, MLflow
-* **Cloud & Deployment:** Azure (AI Foundry, Functions, Blob, AKS), AWS (S3, CloudWatch, ECS, Lambda), Docker, FastAPI, REST APIs, Git
+* **Languages & Databases:** Python, SQL, DuckDB, MySQL, PostgreSQL, Redis, Polars
+* **Applied ML & Modeling:** Statistical Modeling, Predictive Analytics, EDA, Scikit-learn, Pandas, NumPy, Feature Engineering, XGBoost, Anomaly Detection
+* **Deep Learning & CV:** PyTorch, TensorFlow, Keras, OpenCV, OCR (TrOCR/Tesseract), Image & Video Processing, Transfer Learning, CNNs, YOLOv11-Pose, ViViT
+* **Generative AI & LLMs:** Agentic AI, LangGraph, LangChain, RAG Pipelines, Local LLM Inference (Ollama), Vector Databases (pgvector, Pinecone, Chroma), Prompt Engineering, MLflow
+* **Cloud & Deployment:** Azure (AI Foundry, Functions, Blob, AKS), AWS (S3, CloudWatch, ECS, Lambda), Docker, FastAPI, REST APIs, Git, Edge MPS/CUDA
 
 ---
 
 ## PROFESSIONAL EXPERIENCE
 
-### Senior Developer – AI/ML & Digital Operations | WPP Production
+### Senior Developer – Agentic Systems & RAG | WPP Production
 *Aug 2024 – Jul 2026 | Gurugram, India*
-* Architected and deployed production AI/ML services supporting digital media operations, automating digital asset tagging, metadata extraction, and quality control across enterprise marketing workflows.
-* Developed an **Agentic RAG solution** leveraging Azure AI Foundry, OpenAI, LangChain, and vector databases for brand compliance and marketing asset intelligence, reducing knowledge lookup time by **45%**.
-* Built computer vision and OCR pipelines using OpenCV and deep learning to validate multi-lingual text layouts, color compliance, and format standards across high-volume video and image assets.
-* Engineered low-latency **FastAPI and Docker** microservices for model serving, integrating seamlessly with digital asset management (DAM) platforms and processing over 10,000 daily media assets.
-* Implemented **MLflow** experiment tracking and automated model evaluation pipelines, optimizing CPU/memory inference profiles and cutting container execution overhead by **30%**.
+* Architected and deployed an enterprise **Agentic RAG system** leveraging Azure AI Foundry, OpenAI, LangChain, and vector databases for brand compliance and marketing intelligence, cutting search latency by **45%**.
+* Engineered multi-modal Generative AI workflows pairing computer vision (OpenCV) with LLM-driven structured extraction to automate creative asset tagging and regulatory validation across 10,000+ daily assets.
+* Built low-latency **FastAPI and Docker** microservices for production LLM serving, implementing prompt caching and context window optimization to minimize inference latency and compute costs.
+* Implemented **MLflow** for LLM tracing, prompt versioning, and automated evaluation metrics (faithfulness, answer relevance), reducing container execution overhead by **30%**.
 
-### Associate Data Scientist – Machine Learning | Cognizant
+### Generative AI Engineer – LLM Applications & NLP | Cognizant
 *Feb 2023 – May 2024 | Bengaluru, India*
-* Formulated and deployed Python-based ML models and predictive analytics solutions for global banking clients, identifying suspicious transaction behavior patterns.
-* Conducted extensive **Exploratory Data Analysis (EDA)** and statistical anomaly detection on high-dimensional financial records using Pandas, NumPy, and Scikit-learn to uncover transaction fraud indicators.
-* Collaborated with risk and compliance teams to operationalize automated fraud-scoring logic, improving anomaly detection precision across account activity logs.
+* Engineered internal **Generative AI and NLP solutions** for global banking clients, automating extraction, categorization, and summarization of complex financial transaction logs and compliance policies.
+* Developed semantic search and retrieval pipelines utilizing vector embeddings and similarity indexing to surface suspicious transaction narratives and fraud indicators.
+* Collaborated with risk and compliance teams to operationalize automated fraud-scoring logic, verifying LLM outputs against ground-truth account records to improve anomaly detection precision.
 
-### Data Analyst – Business Intelligence & Automation | Cognizant
+### Associate AI Developer – NLP & Intelligent Automation | Cognizant
 *Jan 2022 – Jan 2023 | Bengaluru, India*
-* Engineered automated data extraction and aggregation pipelines utilizing AWS (S3, CloudWatch, ECS) and MySQL, reducing monthly transaction report generation latency by **55%**.
-* Constructed analytical dashboard engines and automated KPI summaries, replacing legacy manual auditing processes and enhancing data accuracy for risk compliance teams.
-* Designed modular data validation modules and automated auditing scripts, accelerating client reporting rollout timelines by **25%**.
+* Engineered automated **NLP text extraction and data ingestion pipelines** utilizing Python, AWS (S3, CloudWatch, ECS), and MySQL to process complex banking transaction records, cutting report generation latency by **55%**.
+* Constructed intelligent auditing services and parsing engines, replacing manual auditing workflows with automated text and anomaly validation for risk compliance teams.
+* Designed modular validation modules and automated testing routines, accelerating client AI automation rollout timelines by **25%**.
 
 ### Software Engineer – Data & Platform | Turbo Hire
 *Jul 2021 – Jan 2022 | Hyderabad, India*
